@@ -46,9 +46,6 @@ function BlogPage() {
         const image = post.image.fields.file.url;
 
         console.log(document.getElementsByClassName("body"))
-        // if ( document.getElementById("textarea") !== null) {
-        //     document.getElementById("textarea").innerHTML = body;
-        // }
 
         let textarea = document.createElement('div');
         textarea.innerHTML = body;
@@ -86,8 +83,7 @@ function BlogPage() {
                             <div className="image">
                                 <img src={image} alt=""/>
                             </div>
-                            {/* <div id="textarea" className="body"></div> */}
-                            <div ref={bodyRef}></div>
+                            <div className="body" ref={bodyRef}></div>
                             {/* <a href={link}>Link</a> */}
                         </div>
                     </InnerLayout>
@@ -103,6 +99,12 @@ const BlogStyled = styled.div`
     .blog-box {
         background-color: var(--background-dark-grey);
         padding: 4rem 4rem;
+        @media screen and (max-width:920px){
+            padding: 2rem 2rem;
+        }
+        @media screen and (max-width:670px){
+            padding: 1rem 1rem;
+        }
         .header {
             .row {
                 padding-bottom: 5%;
@@ -141,8 +143,14 @@ const BlogStyled = styled.div`
                 width: 50%;
             }
         }
-        .body {
-
+        .body, .body * {
+            font-size: 100%;
+            @media screen and (max-width:920px){
+                font-size: 90%;
+            }
+            @media screen and (max-width:670px){
+                font-size: 80%;
+            }
         }
     }
 `
