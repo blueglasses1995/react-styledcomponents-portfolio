@@ -5,7 +5,7 @@ import Resume from '../Components/Resume';
 
 function ResumePage(props) {
     return (
-        <MainLayout>
+        <MainLayout className="main">
             <Skills skills = {props.resume.skills} />
             <Resume resume = {props.resume} />
         </MainLayout>

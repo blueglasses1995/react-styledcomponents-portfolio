@@ -61,9 +61,18 @@ function BlogsPage() {
                 <InnerLayout className={'blog'}>
                     { 
                         (selectedPosts !== (null || undefined)) &&
-                        selectedPosts.map(post => {
+                        selectedPosts.map((post, value) => {
                             return (
-                                <div key={post.fields.slug} className={'blog-item'}>
+                                <div key={post.fields.slug} className={'blog-item'}
+                                data-aos={value % 2 === 0 ? "flip-up": "flip-down"}
+                                data-aos-offset="-200"
+                                data-aos-delay="0"
+                                data-aos-duration="300"
+                                data-aos-easing="ease-in-out-quart"
+                                data-aos-mirror="true"
+                                data-aos-once="true"
+                                data-aos-anchor-placement="bottom-bottom"
+                                >
                                     <NavLink className="level-item button is-small is-link is-outlined"
                                         to={{
                                             pathname: `/blogs/${post.fields.slug}`

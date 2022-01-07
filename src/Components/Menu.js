@@ -7,8 +7,17 @@ function Menu({menuItem}) {
     return (
         <MenuItemStyled >
             {
-                menuItem.map((item)=>{
-                    return <div className="grid-item" key={item.id}>
+                menuItem.map((item, value)=>{
+                    return <div className="grid-item" key={item.id}
+                    data-aos={value % 2 === 0 ? "zoom-out-left": "zoom-out-right"}
+                    data-aos-offset="-200"
+                    data-aos-delay="0"
+                    data-aos-duration="300"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-mirror="true"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="bottom-bottom"
+                    >
                         <div className="portfolio-content">
                             <div className="portfolio-image">
                                 <img src={item.image} alt=""/>

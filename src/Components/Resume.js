@@ -18,13 +18,14 @@ function Resume(props) {
                     <SmallTitle icon={briefcase} title={ props.resume.workExpTag } />
                 </div>
                 <div className="resume-content">
-                    { props.resume.workExps.map(workExp => {
+                    { props.resume.workExps.map((workExp, value) => {
                         return (
                             <ResumeItem 
                                 year={workExp.year} 
                                 title={workExp.title}
                                 subTitle={workExp.company}
                                 text={workExp.description} 
+                                value = {value}
                             />
                         )
                     })}
@@ -33,13 +34,14 @@ function Resume(props) {
                     <SmallTitle icon={school} title={ props.resume.eduTag} />
                 </div>
                 <div className="resume-content ">
-                { props.resume.eduQuals.map(eduQual => {
+                { props.resume.eduQuals.map((eduQual, value) => {
                         return (
                             <ResumeItem 
                                 year={eduQual.year} 
                                 title={eduQual.title}
                                 subTitle={eduQual.school}
                                 text={eduQual.description} 
+                                value={value}
                             />
                         )
                     })}

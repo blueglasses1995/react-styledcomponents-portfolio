@@ -1,9 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function ReviewItem({text, author}) {
+function ReviewItem({text, author, value}) {
     return (
-        <RevivewItemStyled>
+        <RevivewItemStyled 
+            data-aos={value % 2 === 0 ? "flip-down" : "flip-up"}
+            data-aos-offset="0"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center">
             <p>{text}</p>
             <p>{author}</p>
         </RevivewItemStyled>

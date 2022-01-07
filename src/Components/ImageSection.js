@@ -1,3 +1,4 @@
+import { MoveToInbox } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components';
 import resume from '../img/resume.png';
@@ -6,11 +7,28 @@ import PrimaryButton from './PrimaryButton';
 function ImageSection(props) {
     return (
         <ImageSectionStyled>
-            {/* console.log(props) */}
-            <div className="left-content">
+            <div className='left-content'
+                data-aos="fade-left"
+                data-aos-offset="0"
+                data-aos-delay="50"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+            >
                 <img src={resume} alt=""/>
             </div>
-            <div className="right-content">
+            <div className="right-content"
+                data-aos="fade-right"
+                data-aos-offset="100"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+            >
                 <h4>{ props.introduction.greeting }<span>{ props.introduction.name }</span></h4>
                 <p className="paragraph">
                     { props.introduction.detailedDescription }

@@ -4,7 +4,16 @@ import styled from 'styled-components';
 
 function ContactItem({title, icon, cont}) {
     return (
-        <ContactItemStyled>
+        <ContactItemStyled
+        data-aos="flip-down"
+        data-aos-offset="-500"
+        data-aos-delay="0"
+        data-aos-duration="500"
+        data-aos-easing="ease-out-cubic"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="bottom-bottom"
+        >
             <div className="left-content">
                 {
                     icon

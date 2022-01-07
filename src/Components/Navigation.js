@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
 import {NavLink} from 'react-router-dom';
 import avatar from '../img/avatar.png';
 import SocialIcons from '../Components/SocialIcons';
@@ -16,22 +17,58 @@ function Navigation({setLanguageContent, removeMenu}) {
             </div>
             <ul className="nav-items">
                 <li className="nav-item"  onClick={removeMenu}>
+                    <motion.div
+                    initial={{transform:"scale(0)"}}
+                    animate={{scale:[0,1,1.5,1]}}
+                    transition={{type:'spring', duration:1, delay:1}}
+                    >
                     <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
+                </motion.div>
                 </li>
                 <li className="nav-item"  onClick={removeMenu}>
-                    <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
+                    <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,1.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    >
+                        <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
+                    </motion.div>
                 </li>
                 <li className="nav-item"  onClick={removeMenu}>
-                    <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
+                    <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,1.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    >
+                        <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
+                    </motion.div>
                 </li>
                 <li className="nav-item"  onClick={removeMenu}>
-                    <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
+                    <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,1.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    >
+                        <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
+                    </motion.div>
                 </li>
                 <li className="nav-item"  onClick={removeMenu}>
-                    <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
+                    <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,1.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    >
+                        <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
+                    </motion.div>
                 </li>
                 <li className="nav-item"  onClick={removeMenu}>
-                    <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
+                    <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,2.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    >
+                        <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
+                    </motion.div>
                 </li>
             </ul>
 
@@ -39,13 +76,31 @@ function Navigation({setLanguageContent, removeMenu}) {
 
             <LanguageButtons>
                 <li className="button">
-                    <button onClick={() => setLanguageContent(japaneseContent)}>JP</button>
+                    <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,1.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    >
+                        <button onClick={() => setLanguageContent(japaneseContent)}>JP</button>
+                    </motion.div>
                 </li>
                 <li className="button">
-                    <button onClick={() => setLanguageContent(englishContent)}>EN</button>
+                    <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,1.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    >
+                        <button onClick={() => setLanguageContent(englishContent)}>EN</button>
+                    </motion.div>
                 </li>
                 <li className="button">
-                    <button onClick={() => setLanguageContent(chineseContent)}>CN</button>
+                    <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,1.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    > 
+                        <button onClick={() => setLanguageContent(chineseContent)}>CN</button>
+                    </motion.div>
                 </li>
             </LanguageButtons>
 

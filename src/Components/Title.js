@@ -1,10 +1,17 @@
 import React from 'react'
 import styled from 'styled-components';
+import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
 
 function Title({title, span}) {
     return (
         <TitleStyled>
-            <h2>{title} <b><span>{span}</span></b></h2>
+            <motion.div
+                initial={{transform:"scale(0)"}}
+                animate={{scale:[0.8,1.2,1,1]}}
+                transition={{type:'spring', duration:1, delay:1}}
+            >
+                <h2>{title} <b><span>{span}</span></b></h2>
+            </motion.div>
         </TitleStyled>
     )
 }

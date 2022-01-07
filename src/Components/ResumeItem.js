@@ -1,9 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function ResumeItem({year, title, subTitle, text}) {
+function ResumeItem({year, title, subTitle, text, value}) {
     return (
-        <ResumeItemStyled>
+        <ResumeItemStyled
+        data-aos="zoom-in-up"
+        data-aos-offset="200"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="bottom-bottom"
+        >
             <div className="left-content">
                 <p>{year}</p>
             </div>

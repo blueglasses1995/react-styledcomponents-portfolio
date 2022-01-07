@@ -10,10 +10,10 @@ function ReviewsSetion(props) {
             <Title title={'Reviews'} span={'Reviews'} />
             <InnerLayout>
                 <div className="reviews">
-                    { props.reviews.map(review => {
+                    { props.reviews.map((review, value) => {
                         return (
                             <ReviewItem 
-                            text={ review.text } author={ review.author } 
+                            text={ review.text } author={ review.author } value={ value }
                             />
                         )
                     })}

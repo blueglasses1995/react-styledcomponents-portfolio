@@ -1,9 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function ProgressBar({title, width, text, library}) {
+function ProgressBar({title, width, text, library, value}) {
     return (
-        <ProgressBarStyled>
+        <ProgressBarStyled
+        data-aos={value % 2 === 0 ? "flip-right" : "flip-left"}
+        data-aos-offset="0"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="false"
+        data-aos-once="true"
+        data-aos-anchor-placement="bottom-bottom"
+        >
             <h6>{title}</h6>
             <div className="progress-bar">
                 <p>{text}</p>

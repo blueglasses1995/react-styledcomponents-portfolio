@@ -1,18 +1,24 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
 import SocialIcons from '../Components/SocialIcons';
+import { init } from 'ityped'
 
 function HomePage(props) {
+    useEffect(() => {
+        const nameElement = document.querySelector('#name')
+        init(nameElement, { showCursor: false, strings: [props.introduction.name, props.introduction.description ] })
+    })
+
     return (
         <HomePageStyled>
             <div className="particle-con">
                 <Particle />
             </div>
             <div className="typography">
-                <h1>{ props.introduction.greeting }<span>{ props.introduction.name }</span></h1>
+                <h1>{ props.introduction.greeting }<span id="name"></span></h1>
                 <p>
-                    { props.introduction.description }
+                    { props.introduction.detailedIntroduction }
                 </p>
                 <SocialIcons />
             </div>

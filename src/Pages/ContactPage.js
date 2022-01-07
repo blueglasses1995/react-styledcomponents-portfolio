@@ -17,7 +17,16 @@ function ContactPage(props) {
             <Title title={'Contact'} span={'Contact'} />
             <ContactPageStyled >
             <InnerLayout className={'contact-section'}>
-                <div className="left-content">
+                <div className="left-content"
+                    data-aos="slide-up"
+                    data-aos-offset="-500"
+                    data-aos-delay="0"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-mirror="true"
+                    data-aos-once="true"
+                    data-aos-anchor-placement="bottom-bottom"
+                >
                     <div className="contact-title">
                         <h4>{props.contact.title}</h4>
                     </div>

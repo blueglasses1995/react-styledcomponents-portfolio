@@ -12,13 +12,14 @@ function Skills(props) {
                 <InnerLayout>
                     <div className="skills">
                         {
-                            props.skills.map(skill => {
+                            props.skills.map((skill, value) => {
                                 return (
                                     <ProgressBar 
                                         title={ skill.name }
                                         width={ skill.ability }
                                         text={ skill.ability }
                                         library={ skill.library }
+                                        value={ value }
                                     />
                                 )
                             })

@@ -10,11 +10,12 @@ function ServicesSection(props) {
             <ServicesSectionStyled>
                 <Title title={'Services'} span={'services'} />
                 <div className="services">
-                    { props.services.map(service => {
+                    { props.services.map((service, value) => {
                         return <ServiceCard 
                             image={service.image} 
                             title={service.title} 
                             paragraph={service.paragraph}
+                            value={value}
                         />
                     })
                 }

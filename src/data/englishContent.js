@@ -15,8 +15,8 @@ const englishContent = {
     introduction: {
         greeting: "Hi, I'm ",
         name: "Toshiki Matsukuma",
-        description: "A freelance software engineer from Tokyo based in Bangkok. \n Fond of spicy Chinese cuisines and coding.",
-        detailedDescription: "A freelance software engineer from Tokyo based in Bangkok. \n fond of spicy Chinese cuisines and coding.",
+        description: "A freelance software engineer from Tokyo based in Bangkok.",
+        detailedIntroduction: "A freelance software engineer from Tokyo based in Bangkok. \n Fond of spicy Chinese cuisines and coding.",
         nameTag: "Full Name",
         ageTag: "Age",
         nationalityTag: "Nationality",
