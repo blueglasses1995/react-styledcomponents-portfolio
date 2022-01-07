@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar languageContent={languageContent} setLanguageContent={setLanguageContent} navToggle={navToggle} />
+      <Sidebar setLanguageContent={setLanguageContent} navToggle={navToggle} setNavToggle={setNavToggle} />
 
       <div className="theme">
         <div className="light-dark-mode">

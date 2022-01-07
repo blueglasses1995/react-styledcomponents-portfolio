@@ -2,10 +2,14 @@ import React from 'react'
 import styled from 'styled-components';
 import Navigation from './Navigation';
 
-function Sidebar({languageContent, setLanguageContent, navToggle}) {
+function Sidebar({setLanguageContent, navToggle, setNavToggle}) {
+    const removeMenu = () => {
+        (document.body.clientWidth > 1200) || setNavToggle(false)
+    }
+
     return (
-        <SidebarStyled className={`${navToggle ? 'nav-toggle' : ''}`}>
-            <Navigation languageContent={languageContent} setLanguageContent={setLanguageContent} />
+        <SidebarStyled id="sidebar" className={`${navToggle ? 'nav-toggle' : ''}`}>
+            <Navigation setLanguageContent={setLanguageContent} removeMenu={removeMenu} />
         </SidebarStyled>
     )
 }

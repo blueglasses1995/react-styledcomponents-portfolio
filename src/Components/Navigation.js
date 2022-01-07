@@ -2,33 +2,34 @@ import React from 'react'
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import avatar from '../img/avatar.png';
+import SocialIcons from '../Components/SocialIcons';
 import englishContent from "../data/englishContent";
 import japaneseContent from "../data/japaneseContent";
 import chineseContent from "../data/chineseContent";
 
-function Navigation({languageContent, setLanguageContent}) {
+function Navigation({setLanguageContent, removeMenu}) {
     return (
         <NavigationStyled>
             <div className="avatar">
                 <img src={avatar} alt=""/>
             </div>
             <ul className="nav-items">
-                <li className="nav-item">
+                <li className="nav-item"  onClick={removeMenu}>
                     <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item"  onClick={removeMenu}>
                     <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item"  onClick={removeMenu}>
                     <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item"  onClick={removeMenu}>
                     <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item"  onClick={removeMenu}>
                     <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item"  onClick={removeMenu}>
                     <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
                 </li>
             </ul>
@@ -44,6 +45,10 @@ function Navigation({languageContent, setLanguageContent}) {
                     <button onClick={() => setLanguageContent(chineseContent)}>CN</button>
                 </li>
             </LanguageButtons>
+
+            <SocialIconsBar>
+                <SocialIcons />
+            </SocialIconsBar>
 
             <footer className="footer">
                 <p>@2022 <b>Toshiki Matsukuma</b></p>
@@ -107,7 +112,6 @@ const NavigationStyled = styled.nav`
                     z-index: -1;
                 }
             }
-
             a:hover::before{
                 width: 100%;
                 height: 100%;
@@ -163,6 +167,20 @@ const LanguageButtons = styled.ul`
             margin: .5rem;
         }
     }
+`
+
+const SocialIconsBar = styled.div`
+.icons {
+    .icon {
+        &:not(:last-child){
+            /* Modify margin when new icons are added */
+            /* margin-right: 1rem; */
+        }
+        svg {
+            font-size: 1rem;
+        }
+    }
+}
 `
 
 export default Navigation;
