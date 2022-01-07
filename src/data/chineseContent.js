@@ -6,11 +6,6 @@ import react1 from '../img/portImages/react_styled.png';
 import img2 from '../img/portImages/maya-4.jpg';
 import img3 from '../img/portImages/maya-3.jpg';
 
-import blog1 from  '../img/blogs/blog1.svg';
-import blog2 from  '../img/blogs/blog2.svg';
-import blog3 from  '../img/blogs/blog3.svg';
-import blog4 from  '../img/blogs/blog4.svg';
-
 import design from '../img/design.svg';
 import webdev from '../img/web-dev.svg';
 import intelligence from '../img/intelligence.svg';
