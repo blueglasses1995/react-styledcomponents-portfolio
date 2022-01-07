@@ -210,61 +210,6 @@ const englishContent = {
             text: 'Created using HTML and CSS'
         }
     ], 
-    blogs: [
-        {
-            id: 1,
-            title: 'How To Work from Home',
-            date: '01',
-            month: 'April',
-            image: blog1,
-            text: 'hetkoeiaklfgjsffjsgjsklgjskfjklfjadsklgfjadklgjadklgjadklgjadklgjdsgfjfsgkljfsgkjfsjgkjfjglksjflkdasjfklsdjkfgadklfjadk;lfj'
-        },
-        {
-            id: 2,
-            title: 'How To Use SEO Efficiently',
-            date: '01',
-            month: 'April',
-            image: blog2,
-            text: 'hetkoeiaklfgjsffjsgjsklgjskfjklfjadsklgfjadklgjadklgjadklgjadklgjdsgfjfsgkljfsgkjfsjgkjfjglksjflkdasjfklsdjkfgadklfjadk;lfj'
-        },
-        {
-            id: 3,
-            title: 'How to choose a programming Language',
-            date: '01',
-            month: 'April',
-            image: blog3,
-            link: 'https://www.google.co.uk/',
-            text: 'hetkoeiaklfgjsffjsgjsklgjskfjklfjadsklgfjadklgjadklgjadklgjadklgjdsgfjfsgkljfsgkjfsjgkjfjglksjflkdasjfklsdjkfgadklfjadk;lfj'
-        },
-        {
-            id: 4,
-            title: 'How To Tse SEO Efficiently',
-            date: '01',
-            month: 'April',
-            image: blog4,
-            text: 'hetkoeiaklfgjsffjsgjsklgjskfjklfjadsklgfjadklgjadklgjadklgjadklgjdsgfjfsgkljfsgkjfsjgkjfjglksjflkdasjfklsdjkfgadklfjadk;lfj'
-        },
-        {
-            id: 5,
-            title: 'How To Tse SEO Efficiently',
-            date: '01',
-            month: 'April',
-            image: blog4,
-            text: 'hetkoeiaklfgjsffjsgjsklgjskfjklfjadsklgfjadklgjadklgjadklgjadklgjdsgfjfsgkljfsgkjfsjgkjfjglksjflkdasjfklsdjkfgadklfjadk;lfj'
-        }
-    ],
-    contact: {
-        title: "Get In Touch",
-        nameTag: "Enter your name",
-        emailTag: "Enter your email",
-        subjectTag: "Enter your subject",
-        messageTag: "Enter your message",
-        sendTag: "Send Email",
-        myPhoneTag: "Phone",
-        myEmailTag: "Email",
-        myAddressTag: "Address",
-        address: "Soi Sukhumvit 11, Khlong Toei Nuea, Watthana, Bangkok, Thailand"
-    }
 }
 
 export default englishContent
