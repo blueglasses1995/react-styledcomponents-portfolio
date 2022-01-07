@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import avatar from '../img/avatar.png';
 import SocialIcons from '../Components/SocialIcons';
+import SoundBar from "../Components/SoundBar"
 import englishContent from "../data/englishContent";
 import japaneseContent from "../data/japaneseContent";
 import chineseContent from "../data/chineseContent";
@@ -33,6 +34,8 @@ function Navigation({setLanguageContent, removeMenu}) {
                     <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
                 </li>
             </ul>
+
+            <SoundBar />
 
             <LanguageButtons>
                 <li className="button">
