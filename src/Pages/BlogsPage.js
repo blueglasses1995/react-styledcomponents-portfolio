@@ -4,26 +4,64 @@ import Title from '../Components/Title';
 import {MainLayout, InnerLayout} from '../styles/Layouts';
 import {NavLink} from 'react-router-dom';
 import ContentfulConfig from "../contentfulConfig"
+import Button from '../Components/Button';
 
 function BlogsPage() {
     const [posts, setPosts] = useState();
+    const [selectedPosts, setSelectedPosts] = useState();
+    const [categoryButtons, setCategoryButtons] = useState([]);
+    const [tagButtons, setTagButtons] = useState([]);
+    // [Post: [Tag]]
+    const [postTagRelations, setPostTagRelations] = useState({})
 
     useEffect(() => {
         ContentfulConfig.getEntries({content_type: 'post'})
         .then((response)=>{
             setPosts(response.items)
-          })
-          .catch(console.error)
+            return(response.items)
+        })
+        .then((posts)=>{
+            setCategoryButtons(['All', ...new Set(posts.map(post => post.fields.category.fields.category))]);
+            setTagButtons(['All', ...new Set(posts.map(post => post.fields.tag.map(tag => tag.fields.tag)))]);
+            setPostTagRelations(posts.map(post => [post, post.fields.tag.map(tag => tag.fields.tag)]))
+            setSelectedPosts(posts);
+        })
+        .catch(console.error)
     }, [])
+
+    const categoryFilter = (button) => {
+
+        if(button === 'All'){
+            setSelectedPosts(posts);
+            return;
+        }
+
+        const filteredData = posts.filter(post => post.fields.category.fields.category === button);
+        setSelectedPosts(filteredData);
+    }
+
+    // const tagFilter = (button) => {
+    //     if(button === 'All'){
+    //         setSelectedPosts(posts);
+    //         return;
+    //     }
+
+    //     const filteredData = postTagRelations.filter(postTagRelation => postTagRelation[1].includes(button));
+    //     postTagRelations.forEach(postTagRelation => (postTagRelation[1][0] !== button) || filteredData.push(postTagRelation));
+    //     postTagRelations.forEach(postTagRelation => console.log(postTagRelation[1][0] + button))
+    //     console.log(filteredData)
+    // }
 
     return (
         <MainLayout>
             <BlogsStyled>
             <Title title={'Blogs'} span={'Blogs'} />
+            <Button filter={categoryFilter} button={categoryButtons} />
+            {/* <Button filter={tagFilter} button={tagButtons} /> */}
                 <InnerLayout className={'blog'}>
                     { 
-                        (posts !== (null || undefined)) &&
-                        posts.map(post => {
+                        (selectedPosts !== (null || undefined)) &&
+                        selectedPosts.map(post => {
                             return (
                                 <div key={post.fields.slug} className={'blog-item'}>
                                     <NavLink className="level-item button is-small is-link is-outlined"

@@ -8,7 +8,6 @@ function PortfoliosPage(props) {
     const allButtons = ['All', ...new Set(props.portfolios.map(item => item.category))]
     
     const [menuItem, setMenuItems] = useState(props.portfolios);
-    const [button, setButton] = useState(allButtons);
 
     const filter = (button) => {
 
@@ -25,7 +24,7 @@ function PortfoliosPage(props) {
             <Title title={'Portfolios'} span={'portfolios'} />
             <InnerLayout>
 
-                <Button filter={filter} button={button} />
+                <Button filter={filter} button={allButtons} />
                 <Menu menuItem={menuItem} />
             </InnerLayout>
         </MainLayout>
