@@ -60,11 +60,11 @@ function App() {
           </div>
       </div>
 
-      <div className="ham-burger-menu">
+      <HumbergerMenuIcon className="ham-burger-menu">
         <IconButton onClick={() => setNavToggle(!navToggle)}>
             <MenuIcon />
         </IconButton>
-      </div>
+      </HumbergerMenuIcon>
 
 
 
@@ -127,5 +127,19 @@ const MainContentStyled = styled.main`
     }
   }
 `;
+
+const HumbergerMenuIcon = styled.div`
+position: fixed;
+top: 10%;
+left: 85%;
+svg {
+  @media screen and (max-width:920px){
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width:670px){
+    font-size: 2rem;
+  }
+}
+`
 
 export default App;
