@@ -204,7 +204,19 @@ const englishContent = {
             title: 'Microsoft Website Clone',
             text: 'Created using HTML and CSS'
         }
-    ], 
+    ],
+    contact: {
+        title: "Get In Touch",
+        nameTag: "Enter your name",
+        emailTag: "Enter your email",
+        subjectTag: "Enter your subject",
+        messageTag: "Enter your message",
+        sendTag: "Send Email",
+        myPhoneTag: "Phone",
+        myEmailTag: "Email",
+        myAddressTag: "Address",
+        address: "Soi Sukhumvit 11, Khlong Toei Nuea, Watthana, Bangkok, Thailand"
+    } 
 }
 
 export default englishContent

@@ -129,10 +129,12 @@ const MainContentStyled = styled.main`
 `;
 
 const HumbergerMenuIcon = styled.div`
-position: fixed;
-top: 10%;
-left: 85%;
 svg {
+  display: block;
+  position: fixed;
+  top: 10%;
+  left: 85%;
+  z-index: 9999;
   @media screen and (max-width:920px){
     font-size: 2.5rem;
   }
