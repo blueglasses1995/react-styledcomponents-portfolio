@@ -22,8 +22,8 @@ function BlogsPage() {
         })
         .then((posts)=>{
             setCategoryButtons(['All', ...new Set(posts.map(post => post.fields.category.fields.category))]);
-            setTagButtons(['All', ...new Set(posts.map(post => post.fields.tag.map(tag => tag.fields.tag)))]);
-            setPostTagRelations(posts.map(post => [post, post.fields.tag.map(tag => tag.fields.tag)]))
+            // setTagButtons(['All', ...new Set(posts.map(post => post.fields.tag.map(tag => tag.fields.tag)))]);
+            // setPostTagRelations(posts.map(post => [post, post.fields.tag.map(tag => tag.fields.tag)]))
             setSelectedPosts(posts);
         })
         .catch(console.error)

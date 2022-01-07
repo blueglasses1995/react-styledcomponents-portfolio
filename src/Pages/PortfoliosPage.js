@@ -5,8 +5,10 @@ import Menu from '../Components/Menu';
 import Button from '../Components/Button';
 
 function PortfoliosPage(props) {
-    const allButtons = ['All', ...new Set(props.portfolios.map(item => item.category))]
-    
+    // const allButtons = ['All', ...new Set(props.portfolios.map(item => new Set(item.technologies.map(tech => tech))))]
+    let allButtons = ['All'];
+    props.portfolios.forEach(item => (item.technologies.forEach(tech => {(allButtons.indexOf(tech) >= 0) || allButtons.push(tech)})))
+
     const [menuItem, setMenuItems] = useState(props.portfolios);
 
     const filter = (button) => {
@@ -16,7 +18,7 @@ function PortfoliosPage(props) {
             return;
         }
 
-        const filteredData = props.portfolios.filter(item => item.category === button);
+        const filteredData = props.portfolios.filter(item => item.technologies.includes(button));
         setMenuItems(filteredData);
     }
     return (

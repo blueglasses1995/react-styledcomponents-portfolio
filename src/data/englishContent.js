@@ -143,7 +143,7 @@ const englishContent = {
     portfolios: [
         {
             id: 1,
-            category: 'CSS',
+            technologies: ['HTML','CSS', 'PHP', 'Wordpress'],
             image: css1,
             link1: 'https://www.google.com',
             link2: 'https://www.google.com',
@@ -152,7 +152,7 @@ const englishContent = {
         },
         {
             id: 2,
-            category: 'Python',
+            technologies: ['Python', 'Django'],
             image: img3,
             link1: 'https://www.google.com',
             link2: 'https://www.google.com',
@@ -161,7 +161,7 @@ const englishContent = {
         },
         {
             id: 3,
-            category: 'Javascript',
+            technologies: ['Javascript'],
             image: img3,
             link1: 'https://www.google.com',
             link2: 'https://www.google.com',
@@ -170,7 +170,7 @@ const englishContent = {
         },
         {
             id: 4,
-            category: 'Animation',
+            technologies: ['Animation'],
             image: img2,
             link1: 'https://www.google.com',
             link2: 'https://www.google.com',
@@ -179,7 +179,7 @@ const englishContent = {
         },
         {
             id: 5,
-            category: 'Animation',
+            technologies: ['Animation'],
             image: img2,
             link1: 'https://www.google.com',
             link2: 'https://www.google.com',
@@ -188,7 +188,7 @@ const englishContent = {
         },
         {
             id: 6,
-            category: 'React JS',
+            technologies: ['React JS'],
             image: react1,
             link1: 'https://www.google.com',
             link2: 'https://www.google.com',
@@ -197,7 +197,7 @@ const englishContent = {
         },
         {
             id: 7,
-            category: 'CSS',
+            technologies: ['CSS'],
             image: css2,
             link1: 'https://www.google.com',
             link2: 'https://www.google.com',
