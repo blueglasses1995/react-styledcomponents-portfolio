@@ -1,14 +1,20 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components';
 import Particle from '../Components/Particle';
 import SocialIcons from '../Components/SocialIcons';
 import { init } from 'ityped'
 
 function HomePage(props) {
+    const [animatedStrings, setAnimatedString] = useState([ props.introduction.name, props.introduction.description ])
+    const [isFirstRendering, setIsFirstRendering] = useState(true)
+
     useEffect(() => {
         const nameElement = document.querySelector('#name')
-        init(nameElement, { showCursor: false, strings: [props.introduction.name, props.introduction.description ] })
-    })
+        if (isFirstRendering === true) {
+            init(nameElement, { showCursor: false, strings: animatedStrings })
+            setIsFirstRendering(false);
+        }
+    }, [isFirstRendering, animatedStrings])
 
     return (
         <HomePageStyled>
