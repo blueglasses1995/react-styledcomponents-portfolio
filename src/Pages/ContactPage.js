@@ -54,7 +54,7 @@ function ContactPage(props) {
                 </div>
                 <div className="right-content">
                     <ContactItem title={props.contact.myPhoneTag} icon={phone} cont={'+66-839057605'}/>
-                    <ContactItem title={props.contact.myEmailTag} icon={email} cont={'blueglasses1995@gmail.com'}/>
+                    <ContactItem title={props.contact.myEmailTag} icon={email} cont={'kuma1995dev@gmail.com'}/>
                     <ContactItem title={props.contact.myAddressTag} icon={location} cont={props.contact.address}/>
                     
                 </div>

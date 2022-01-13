@@ -5,13 +5,16 @@ import {AnimatePresence, motion} from 'framer-motion/dist/framer-motion'
 function Title({title, span}) {
     return (
         <TitleStyled>
-            <motion.div
-                initial={{transform:"scale(0)"}}
-                animate={{scale:[0.8,1.2,1,1]}}
-                transition={{type:'spring', duration:1, delay:1}}
-            >
-                <h2>{title} <b><span>{span}</span></b></h2>
-            </motion.div>
+            <h2
+                data-aos="flip-right"
+                data-aos-offset="0"
+                data-aos-delay="50"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="false"
+                data-aos-once="true"
+                data-aos-anchor-placement="bottom-bottom"
+            >{title} <b><span>{span}</span></b></h2>
         </TitleStyled>
     )
 }

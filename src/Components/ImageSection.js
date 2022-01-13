@@ -34,24 +34,62 @@ function ImageSection(props) {
                     { props.introduction.detailedDescription }
                 </p>
                 <div className="about-info">
-                    <div className="info-title">
-                        <p>{ props.introduction.nameTag }</p>
-                        <p>{ props.introduction.ageTag }</p>
-                        <p>{ props.introduction.nationalityTag } </p>
-                        <p>{ props.introduction.languageTag }</p>
-                        <p>{ props.introduction.locationTag }</p>
-                        <p>{ props.introduction.serviceTag }</p>
-                        <p>{ props.introduction.hobbyTag }</p>
+                    <div class="row">
+                        <div className="info-title">
+                            <p>{ props.introduction.nameTag }</p>
+                        </div>
+                        <div className="info">
+                            <p>: { props.introduction.name }</p>
+                        </div>
                     </div>
-                    <div className="info">
-                        <p>: { props.introduction.name }</p>
-                        <p>: { props.introduction.age }</p>
-                        <p>: { props.introduction.nationality } </p>
-                        <p>: { props.introduction.language } </p>
-                        <p>: { props.introduction.location }</p>
-                        <p>: { props.introduction.service }</p>
-                        <p>{ props.introduction.hobby }</p>
+                    <div class="row">
+                        <div className="info-title">
+                            <p>{ props.introduction.ageTag }</p>
+                        </div>
+                        <div className="info">
+                            <p>: { props.introduction.age }</p>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div className="info-title">
+                            <p>{ props.introduction.nationalityTag } </p>
+                        </div>
+                        <div className="info">
+                            <p>: { props.introduction.nationality } </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div className="info-title">
+                            <p>{ props.introduction.languageTag }</p>
+                        </div>
+                        <div className="info">
+                            <p>: { props.introduction.language } </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div className="info-title">
+                            <p>{ props.introduction.locationTag }</p>
+                        </div>
+                        <div className="info">
+                            <p>: { props.introduction.location }</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div className="info-title">
+                            <p>{ props.introduction.serviceTag }</p>
+                        </div>
+                        <div className="info">
+                            <p>: { props.introduction.service }</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div className="info-title">
+                            <p>{ props.introduction.hobbyTag }</p>
+                        </div>
+                        <div className="info">
+                            <p>: { props.introduction.hobby }</p>
+                        </div>
+                    </div>                    
                 </div>
                 <PrimaryButton title={props.introduction.cvTag} />
             </div>
@@ -89,17 +127,19 @@ const ImageSectionStyled = styled.div`
             padding: 1rem 0;
         }
         .about-info{
-            display: flex;
             padding-bottom: 1.4rem;
-            .info-title{
-                padding-right: 3rem;
-                p{
-                    font-weight: 600;
+            .row {
+                display: flex;
+                .info-title{
+                    padding-right: 1rem;
+                    p{
+                        font-weight: 600;
+                    }
                 }
-            }
-            .info-title, .info{
-                p{
-                    padding: .3rem 0;
+                .info-title, .info{
+                    p{
+                        padding: .3rem 0;
+                    }
                 }
             }
         }

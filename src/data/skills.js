@@ -2,7 +2,7 @@ const skills = [
     {
         name: "Typescript",
         ability: "90%",
-        library: "React.js, Vue.js Next.js, Node.js, Nest.js, Three.js, D3.js"
+        library: "React.js, Vue.js Next.js, Node.js, Nest.js, Nuxt.js, Three.js, D3.js"
     },
     {
         name: "Python",

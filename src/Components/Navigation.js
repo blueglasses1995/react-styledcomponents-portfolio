@@ -72,7 +72,13 @@ function Navigation({setLanguageContent, removeMenu}) {
                 </li>
             </ul>
 
-            <SoundBar />
+            <motion.div
+                        initial={{transform:"scale(0)"}}
+                        animate={{scale:[0,1,1.5,1]}}
+                        transition={{type:'spring', duration:1, delay:1}}
+                    >
+                <SoundBar />
+            </motion.div>
 
             <LanguageButtons>
                 <li className="button">

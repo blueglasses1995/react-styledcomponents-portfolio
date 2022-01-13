@@ -5,7 +5,7 @@ function ResumeItem({year, title, subTitle, text, value}) {
     return (
         <ResumeItemStyled
         data-aos="zoom-in-up"
-        data-aos-offset="200"
+        data-aos-offset="0"
         data-aos-delay="0"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
@@ -55,6 +55,7 @@ const ResumeItemStyled = styled.div`
         }
     }
     .right-content{
+        width: 80%;
         padding-left: 5rem;
         position: relative;
         &::before{
