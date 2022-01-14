@@ -3,17 +3,17 @@ import styled from 'styled-components';
 
 function ServiceCard({image, title, paragraph, value}) {
     return (
-        <ServiceCardStyled >
-            <div className="container"
-                data-aos={value % 2 === 0 ? "fade-up" : "fade-down"}
-                data-aos-offset="0"
-                data-aos-delay="50"
-                data-aos-duration="500"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
-            >
+        <ServiceCardStyled 
+            data-aos={value % 2 === 0 ? "fade-up" : "fade-down"}
+            data-aos-offset="0"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="top-center"
+        >
+            <div className="container">
                 <img src={image} alt=""/>
                 <h4>{title}</h4>
                 <p>{paragraph}</p>

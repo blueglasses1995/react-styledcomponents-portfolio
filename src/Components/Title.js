@@ -12,7 +12,7 @@ function Title({title, span}) {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="false"
-                data-aos-once="true"
+                data-aos-once="false"
                 data-aos-anchor-placement="bottom-bottom"
             >{title} <b><span>{span}</span></b></h2>
         </TitleStyled>

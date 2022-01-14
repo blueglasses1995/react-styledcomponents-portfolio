@@ -10,7 +10,7 @@ function ResumeItem({year, title, subTitle, text, value}) {
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
-        data-aos-once="true"
+        data-aos-once="false"
         data-aos-anchor-placement="bottom-bottom"
         >
             <div className="left-content">
@@ -79,7 +79,7 @@ const ResumeItemStyled = styled.div`
                 font-size: 0.9rem;
             }
             p {
-                font-size: 0.5rem;
+                font-size: 0.8rem;
             }
         }
     }

@@ -10,7 +10,7 @@ function ProgressBar({title, width, text, library, value}) {
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
         data-aos-mirror="false"
-        data-aos-once="true"
+        data-aos-once="false"
         data-aos-anchor-placement="bottom-bottom"
         >
             <h6>{title}</h6>

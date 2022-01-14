@@ -11,7 +11,7 @@ function ContactItem({title, icon, cont}) {
         data-aos-duration="500"
         data-aos-easing="ease-out-cubic"
         data-aos-mirror="true"
-        data-aos-once="true"
+        data-aos-once="false"
         data-aos-anchor-placement="bottom-bottom"
         >
             <div className="left-content">

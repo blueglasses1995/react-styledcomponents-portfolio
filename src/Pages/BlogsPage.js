@@ -72,7 +72,7 @@ function BlogsPage() {
                                 data-aos-duration="300"
                                 data-aos-easing="ease-in-out-quart"
                                 data-aos-mirror="true"
-                                data-aos-once="true"
+                                data-aos-once="false"
                                 data-aos-anchor-placement="bottom-bottom"
                                 >
                                     <NavLink className="level-item button is-small is-link is-outlined"
