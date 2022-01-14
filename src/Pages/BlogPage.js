@@ -19,6 +19,7 @@ function BlogPage() {
             })
             .catch(console.error)
         }
+        setPost(null)
         fetchData()
     }, [slug])
 
