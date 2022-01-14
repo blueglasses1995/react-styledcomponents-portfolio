@@ -53,24 +53,22 @@ function BlogPage() {
                                 <div className="row row-top">
                                     <div className="date">{publishDate}</div>
                                     <div className="category">{category.fields.category}</div>
-                                    <div className="tags">
-                                        <span>
-                                            {
-                                                (tag !== (null || undefined)) &&
-                                                tag.map((t,id) => {
-                                                    return <span key={id}>#{t.fields.tag}</span>
-                                                })
-                                            }
-                                        </span>                                
-                                        <span>
-                                            {
-                                                (technology !== (null || undefined)) &&
-                                                technology.map((t,id) => {
-                                                    return <span key={id}>#{t.fields.technology}</span>
-                                                })
-                                            }
-                                        </span>
-                                    </div>
+                                </div>
+                                <div className="row row-tags">
+                                    {
+                                        (tag !== (null || undefined)) &&
+                                        tag.map((t,id) => {
+                                            return <span key={id}>#{t.fields.tag}</span>
+                                        })
+                                    }
+                                </div>
+                                <div className="row row-tags row-techtags">                                
+                                    {
+                                        (technology !== (null || undefined)) &&
+                                        technology.map((t,id) => {
+                                            return <span key={id}>#{t.fields.technology}</span>
+                                        })
+                                    }
                                 </div>
                                 <div className="row row-title">{title}</div>  
                             </div>
@@ -106,20 +104,23 @@ const BlogStyled = styled.div`
             }
             .row-top {
                 display: flex;
-                justify-content: space-between;
                 .date {
 
                 }
                 .category {
-
+                    margin: 0 auto;
                 }
-                .tags {
-                    span {
-                        font-size: 75%;
-                        color: inherit;
-                        &:not(:last-child){
-                            margin-right: 1rem;
-                        }
+            }
+            .row-tags {
+                display: flex;
+                justify-content: safe center;
+                flex-wrap: wrap;
+                padding-bottom: 3%;
+                span {
+                    font-size: 80%;
+                    color: inherit;
+                    &:not(:last-child){
+                        margin-right: 1rem;
                     }
                 }
             }
@@ -133,7 +134,6 @@ const BlogStyled = styled.div`
             text-align: center;
             padding-bottom: 10%;
             img {
-                
                 height: 50%;
                 width: 50%;
             }
