@@ -5,7 +5,7 @@ function ReviewItem({text, author, value}) {
     return (
         <RevivewItemStyled 
             data-aos={value % 2 === 0 ? "flip-down" : "flip-up"}
-            data-aos-offset="0"
+            data-aos-offset="-200"
             data-aos-delay="50"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"

@@ -45,7 +45,16 @@ function BlogPage() {
         textarea.innerHTML = body;
         return (
             <MainLayout>
-                <BlogStyled>
+                <BlogStyled
+                    data-aos="fade-right"
+                    data-aos-offset="100"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-mirror="true"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top-center"
+                >
                 <Title title={'Blog'} span={'Blog'} />
                     <InnerLayout className={'blog'}>
                         <div className="blog-box">
@@ -128,14 +137,22 @@ const BlogStyled = styled.div`
                 text-align: center;
                 font-size: 3vw;
                 color: var(--white-color);
+                @media screen and (max-width:670px){
+                    font-size: 5vw;
+            }
             }
         }
         .image {
             text-align: center;
             padding-bottom: 10%;
             img {
-                height: 50%;
-                width: 50%;
+                height: 70%;
+                width: 70%;
+
+                @media screen and (max-width:670px){
+                    height: 100%;
+                    width: 100%;
+                }
             }
         }
         .body, .body * {
