@@ -5,6 +5,7 @@ import {MainLayout, InnerLayout} from '../styles/Layouts';
 import {NavLink} from 'react-router-dom';
 import ContentfulConfig from "../contentfulConfig"
 import Button from '../Components/Button';
+import { ContactSupportOutlined } from '@material-ui/icons';
 
 function BlogsPage() {
     const [posts, setPosts] = useState();
@@ -17,7 +18,8 @@ function BlogsPage() {
     useEffect(() => {
         ContentfulConfig.getEntries({content_type: 'post'})
         .then((response)=>{
-            setPosts(response.items)
+            const compare = (x, y) => new Date(x.fields.publishDate).getTime() < new Date(y.fields.publishDate).getTime() ? 1 : -1;
+            setPosts(response.items.sort(compare))
             return(response.items)
         })
         .then((posts)=>{
@@ -81,6 +83,7 @@ function BlogsPage() {
                                         <div className="image">
                                             <img src={post.fields.image.fields.file.url} alt=""/>
                                         </div>
+                                        <div className="date">{post.fields.publishDate}</div>
                                         <div className="title">{post.fields.title}</div>
                                     </NavLink>
                                 </div>
