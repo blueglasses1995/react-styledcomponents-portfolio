@@ -14,13 +14,8 @@ function BlogPage() {
         const fetchData = async () => {
             await ContentfulConfig.getEntries({content_type: 'post'})
             .then((response)=>{
-                const posts = response.items.map(post => {
-                    if (post.fields.slug === slug) {
-                        return post
-                    }
-                    return {};
-                });
-                setPost(posts[0].fields)
+                const selectedPost = response.items.filter(post => post.fields.slug === slug);
+                setPost(selectedPost[0].fields)
             })
             .catch(console.error)
         }
@@ -29,7 +24,7 @@ function BlogPage() {
 
     useLayoutEffect(() => {
         if (!bodyRef.current) {
-          return;
+            return;
         }
         
         if (!(post === null || post === undefined)) {
@@ -39,13 +34,11 @@ function BlogPage() {
             
             bodyRef.current.appendChild(fragment);
         }
-      }, [post]);
+    }, [post]);
 
     if (!(post === null || post === undefined)) {
         const {title, publishDate, author, importance, body, link, category, tag, technology} = post
         const image = post.image.fields.file.url;
-
-        console.log(document.getElementsByClassName("body"))
 
         let textarea = document.createElement('div');
         textarea.innerHTML = body;
@@ -91,6 +84,7 @@ function BlogPage() {
             </MainLayout>
         )
     } else {
+        console.log("No posts matched");
         return "";
     }
 }
