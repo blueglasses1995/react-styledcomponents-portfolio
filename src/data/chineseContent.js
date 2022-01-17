@@ -8,6 +8,8 @@ import portfolio from '../img/portImages/portfolio.png';
 import shopify from '../img/portImages/shopify.png';
 import smart_contract from '../img/portImages/smart_contract.png';
 import video_chat from '../img/portImages/video_chat.png';
+import wordpress_blog from '../img/portImages/wordpress_blog.png';
+import wordpress_corporate_site from '../img/portImages/wordpress_corporate_site.png';
 
 import design from '../img/design.svg';
 import webdev from '../img/web-dev.svg';
@@ -215,6 +217,24 @@ const chineseContent = {
             github: 'https://github.com/blueglasses1995/next-typescript-shopify',
             title: 'shopify后端电商网站',
             text: '您可以以多种付款方式选购任意商品'
+        },
+        {
+            id: 9,
+            technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
+            image: wordpress_blog,
+            link: 'http://globalestateglobalestateglobalestate.com/',
+            github: 'https://github.com/blueglasses1995/wordpress-corporate-site',
+            title: 'Wordpress附带管理者界面的企业网站',
+            text: '日志和企业信息可以在的Wordpress的管理者界面进行管理。'
+        },
+        {
+            id: 10,
+            technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
+            image: wordpress_corporate_site,
+            link: 'http://globalestateglobalestateglobalestate.com/tea-break/',
+            github: 'https://github.com/blueglasses1995/wordpress-blog',
+            title: 'Wordpress附带管理者界面的博客',
+            text: '博客日志可以在Wordpress的管理者界面进行管理。'
         },
     ], 
     contact: {

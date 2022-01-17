@@ -8,6 +8,8 @@ import portfolio from '../img/portImages/portfolio.png';
 import shopify from '../img/portImages/shopify.png';
 import smart_contract from '../img/portImages/smart_contract.png';
 import video_chat from '../img/portImages/video_chat.png';
+import wordpress_blog from '../img/portImages/wordpress_blog.png';
+import wordpress_corporate_site from '../img/portImages/wordpress_corporate_site.png';
 
 import design from '../img/design.svg';
 import webdev from '../img/web-dev.svg';
@@ -215,6 +217,24 @@ const japaneseContent = {
             github: 'https://github.com/blueglasses1995/next-typescript-shopify',
             title: 'Shopifyをバックエンドに置いたECサイト',
             text: '多種多様な決済方法で商品を選択し購入することができる。'
+        },
+        {
+            id: 9,
+            technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
+            image: wordpress_blog,
+            link: 'http://globalestateglobalestateglobalestate.com/',
+            github: 'https://github.com/blueglasses1995/wordpress-corporate-site',
+            title: 'Wordpress管理画面付きのコーポレートサイト',
+            text: '投稿と企業情報をWordpress管理画面で管理できる。'
+        },
+        {
+            id: 10,
+            technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
+            image: wordpress_corporate_site,
+            link: 'http://globalestateglobalestateglobalestate.com/tea-break/',
+            github: 'https://github.com/blueglasses1995/wordpress-blog',
+            title: 'Wordpress管理画面付きのブログサイト',
+            text: 'ブログ投稿をWordpress管理画面で管理できる。'
         },
     ], 
     contact: {

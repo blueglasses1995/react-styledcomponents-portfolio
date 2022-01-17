@@ -8,6 +8,8 @@ import portfolio from '../img/portImages/portfolio.png';
 import shopify from '../img/portImages/shopify.png';
 import smart_contract from '../img/portImages/smart_contract.png';
 import video_chat from '../img/portImages/video_chat.png';
+import wordpress_blog from '../img/portImages/wordpress_blog.png';
+import wordpress_corporate_site from '../img/portImages/wordpress_corporate_site.png';
 
 import design from '../img/design.svg';
 import webdev from '../img/web-dev.svg';
@@ -215,6 +217,24 @@ const englishContent = {
             github: 'https://github.com/blueglasses1995/next-typescript-shopify',
             title: 'EC site with shopify backend',
             text: 'You can select and purchase any items with variety types of payment methods.'
+        },
+        {
+            id: 9,
+            technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
+            image: wordpress_blog,
+            link: 'http://globalestateglobalestateglobalestate.com/',
+            github: 'https://github.com/blueglasses1995/wordpress-corporate-site',
+            title: 'Corporate site with wordpress dashboard',
+            text: 'You can manage posts and corporate infos on wordpress dashboard.'
+        },
+        {
+            id: 10,
+            technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
+            image: wordpress_corporate_site,
+            link: 'http://globalestateglobalestateglobalestate.com/tea-break/',
+            github: 'https://github.com/blueglasses1995/wordpress-blog',
+            title: 'blog site with wordpress dashboard',
+            text: 'You can manage blog posts on wordpress dashboard.'
         },
     ], 
     contact: {
