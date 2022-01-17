@@ -221,7 +221,7 @@ const japaneseContent = {
         {
             id: 9,
             technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
-            image: wordpress_blog,
+            image: wordpress_corporate_site,
             link: 'http://globalestateglobalestateglobalestate.com/',
             github: 'https://github.com/blueglasses1995/wordpress-corporate-site',
             title: 'Wordpress管理画面付きのコーポレートサイト',
@@ -230,7 +230,7 @@ const japaneseContent = {
         {
             id: 10,
             technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
-            image: wordpress_corporate_site,
+            image: wordpress_blog,
             link: 'http://globalestateglobalestateglobalestate.com/tea-break/',
             github: 'https://github.com/blueglasses1995/wordpress-blog',
             title: 'Wordpress管理画面付きのブログサイト',

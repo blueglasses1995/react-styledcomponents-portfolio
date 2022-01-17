@@ -221,7 +221,7 @@ const englishContent = {
         {
             id: 9,
             technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
-            image: wordpress_blog,
+            image: wordpress_corporate_site,
             link: 'http://globalestateglobalestateglobalestate.com/',
             github: 'https://github.com/blueglasses1995/wordpress-corporate-site',
             title: 'Corporate site with wordpress dashboard',
@@ -230,7 +230,7 @@ const englishContent = {
         {
             id: 10,
             technologies: ['HTML','CSS', 'javascript', 'PHP', 'Wordpress'],
-            image: wordpress_corporate_site,
+            image: wordpress_blog,
             link: 'http://globalestateglobalestateglobalestate.com/tea-break/',
             github: 'https://github.com/blueglasses1995/wordpress-blog',
             title: 'blog site with wordpress dashboard',
