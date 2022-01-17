@@ -2,7 +2,7 @@ import { MoveToInbox } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components';
 import resume from '../img/resume.png';
-import PrimaryButton from './PrimaryButton';
+import CvButton from './CvButton';
 
 function ImageSection(props) {
     return (
@@ -91,7 +91,7 @@ function ImageSection(props) {
                         </div>
                     </div>                    
                 </div>
-                <PrimaryButton title={props.introduction.cvTag} />
+                <CvButton title={props.introduction.cvTag} />
             </div>
         </ImageSectionStyled>
     )

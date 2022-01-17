@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {MainLayout, InnerLayout} from '../styles/Layouts';
 import Title from '../Components/Title';
-import PrimaryButton from '../Components/PrimaryButton';
+import SubmitButton from '../Components/SubmitButton';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
@@ -30,25 +30,27 @@ function ContactPage(props) {
                     <div className="contact-title">
                         <h4>{props.contact.title}</h4>
                     </div>
-                    <form  className="form">
+                    <form class="formrun form" action="https://form.run/api/v1/r/p0zgv84u8ko02zktutuymfpu" method="post">
                         <div className="form-field">
-                            <label htmlFor="name"  >{props.contact.nameTag}*</label>
-                            <input type="text" id="name" />
+                            <label htmlFor="name">{props.contact.nameTag}*</label>
+                            <input type="text" id="name" data-formrun-required />
                         </div>
                         <div className="form-field">
-                            <label htmlFor="email"  >{props.contact.emailTag}*</label>
-                            <input type="email" id="email" />
+                            <label htmlFor="email">{props.contact.emailTag}*</label>
+                            <input type="email" id="email" data-formrun-type="email" data-formrun-required />
+                            <div data-formrun-show-if-error="email"></div>
                         </div>
                         <div className="form-field">
-                            <label htmlFor="subject"  >{props.contact.subjectTag}</label>
+                            <label htmlFor="subject" >{props.contact.subjectTag}</label>
                             <input type="text" id="subject" />
                         </div>
                         <div className="form-field">
                             <label htmlFor="text-area">{props.contact.messageTag}*</label>
-                            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                            <textarea name="textarea" id="textarea" cols="30" rows="10" data-formrun-required></textarea>
+                            <div data-formrun-show-if-error="textarea"></div>
                         </div>
                         <div className="form-field f-button">
-                            <PrimaryButton title={props.contact.sendTag} />
+                            <SubmitButton type="submit" data-formrun-error-text="There are unfilled boxes" data-formrun-submitting-text="Sending..." title={props.contact.sendTag} />
                         </div>
                     </form>
                 </div>
@@ -56,7 +58,6 @@ function ContactPage(props) {
                     <ContactItem title={props.contact.myPhoneTag} icon={phone} cont={'+66-839057605'}/>
                     <ContactItem title={props.contact.myEmailTag} icon={email} cont={'toshiki.matsukuma@sunyata.com'}/>
                     <ContactItem title={props.contact.myAddressTag} icon={location} cont={props.contact.address}/>
-                    
                 </div>
             </InnerLayout>
             </ContactPageStyled>
