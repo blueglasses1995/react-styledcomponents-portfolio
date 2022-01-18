@@ -5,11 +5,12 @@ import landing_page from '../img/portImages/landing_page.png';
 import portfolio_with_courses from '../img/portImages/portfolio_with_courses.png';
 import portfolio_yinyang from '../img/portImages/portfolio_yinyang.png';
 import portfolio from '../img/portImages/portfolio.png';
-import shopify from '../img/portImages/shopify.png';
+import shopify_liquor from '../img/portImages/shopify_liquor.png';
 import smart_contract from '../img/portImages/smart_contract.png';
 import video_chat from '../img/portImages/video_chat.png';
 import wordpress_blog from '../img/portImages/wordpress_blog.png';
 import wordpress_corporate_site from '../img/portImages/wordpress_corporate_site.png';
+import shopify_fashion from '../img/portImages/shopify_fashion.png';
 
 import design from '../img/design.svg';
 import webdev from '../img/web-dev.svg';
@@ -211,8 +212,8 @@ const japaneseContent = {
         },
         {
             id: 8,
-            technologies: ['HTML','CSS', 'Typescript', 'React.js', 'Next.js'],
-            image: shopify,
+            technologies: ['HTML','CSS', 'Typescript', 'React.js', 'Next.js', 'Shopify'],
+            image: shopify_liquor,
             link: 'https://next-typescript-shopify-lbfu0h8zt-blueglasses1995.vercel.app/',
             github: 'https://github.com/blueglasses1995/next-typescript-shopify',
             title: 'Shopifyをバックエンドに置いたECサイト',
@@ -235,6 +236,15 @@ const japaneseContent = {
             github: 'https://github.com/blueglasses1995/wordpress-blog',
             title: 'Wordpress管理画面付きのブログサイト',
             text: 'ブログ投稿をWordpress管理画面で管理できる。'
+        },
+        {
+            id: 11,
+            technologies: ['HTML','CSS', 'javascript', 'Liquid', 'Shopify'],
+            image: shopify_fashion,
+            link: 'https://vomiting-bird-outdated-fashion.myshopify.com/',
+            github: 'https://github.com/blueglasses1995/liquid-javascript-shopify',
+            title: 'Shopifyをフロントエンドとバックエンドに置いたECサイト',
+            text: '多種多様な決済方法で商品を選択し購入することができる。'
         },
     ], 
     contact: {

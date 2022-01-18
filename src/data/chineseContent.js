@@ -5,11 +5,12 @@ import landing_page from '../img/portImages/landing_page.png';
 import portfolio_with_courses from '../img/portImages/portfolio_with_courses.png';
 import portfolio_yinyang from '../img/portImages/portfolio_yinyang.png';
 import portfolio from '../img/portImages/portfolio.png';
-import shopify from '../img/portImages/shopify.png';
+import shopify_liquor from '../img/portImages/shopify_liquor.png';
 import smart_contract from '../img/portImages/smart_contract.png';
 import video_chat from '../img/portImages/video_chat.png';
 import wordpress_blog from '../img/portImages/wordpress_blog.png';
 import wordpress_corporate_site from '../img/portImages/wordpress_corporate_site.png';
+import shopify_fashion from '../img/portImages/shopify_fashion.png';
 
 import design from '../img/design.svg';
 import webdev from '../img/web-dev.svg';
@@ -153,7 +154,7 @@ const chineseContent = {
             link: 'https://nuxt-promotion-app.herokuapp.com/',
             github: 'https://github.com/blueglasses1995/nuxt-promotion-app',
             title: '带有在线课程的作品网站',
-            text: '您可以购买课程并下载简历.'
+            text: '您可以购买课程并下载简历。'
         },
         {
             id: 2,
@@ -207,16 +208,16 @@ const chineseContent = {
             link: 'https://cky8ztju485549qojnzlqz4pfq-j6gaht0fd-blueglasses1995.vercel.app/create',
             github: 'https://github.com/blueglasses1995/react-chat-room',
             title: '私人视频通话',
-            text: '您可以与持有通行密码的用户进行私人通话'
+            text: '您可以与持有通行密码的用户进行私人通话。'
         },
         {
             id: 8,
-            technologies: ['HTML','CSS', 'Typescript', 'React.js', 'Next.js'],
-            image: shopify,
+            technologies: ['HTML','CSS', 'Typescript', 'React.js', 'Next.js', 'Shopify'],
+            image: shopify_liquor,
             link: 'https://next-typescript-shopify-lbfu0h8zt-blueglasses1995.vercel.app/',
             github: 'https://github.com/blueglasses1995/next-typescript-shopify',
             title: 'shopify后端电商网站',
-            text: '您可以以多种付款方式选购任意商品'
+            text: '您可以以多种付款方式选购任意商品。'
         },
         {
             id: 9,
@@ -235,6 +236,15 @@ const chineseContent = {
             github: 'https://github.com/blueglasses1995/wordpress-blog',
             title: 'Wordpress附带管理者界面的博客',
             text: '博客日志可以在Wordpress的管理者界面进行管理。'
+        },
+        {
+            id: 11,
+            technologies: ['HTML','CSS', 'javascript', 'Liquid', 'Shopify'],
+            image: shopify_fashion,
+            link: 'https://vomiting-bird-outdated-fashion.myshopify.com/',
+            github: 'https://github.com/blueglasses1995/liquid-javascript-shopify',
+            title: 'shopify前端与后端电商网站',
+            text: '您可以以多种付款方式选购任意商品。'
         },
     ], 
     contact: {
