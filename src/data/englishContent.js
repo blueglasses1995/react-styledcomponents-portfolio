@@ -241,7 +241,7 @@ const englishContent = {
             id: 11,
             technologies: ['HTML','CSS', 'javascript', 'Liquid', 'Shopify'],
             image: shopify_fashion,
-            link: 'https://vomiting-bird-outdated-fashion.myshopify.com/',
+            link: 'https://next-typescript-shopify.vercel.app/',
             github: 'https://github.com/blueglasses1995/liquid-javascript-shopify',
             title: 'EC site with shopify frontend and backend',
             text: 'You can select and purchase any items with variety types of payment methods.'

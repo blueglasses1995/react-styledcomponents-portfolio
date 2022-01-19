@@ -214,7 +214,7 @@ const japaneseContent = {
             id: 8,
             technologies: ['HTML','CSS', 'Typescript', 'React.js', 'Next.js', 'Shopify'],
             image: shopify_liquor,
-            link: 'https://next-typescript-shopify-lbfu0h8zt-blueglasses1995.vercel.app/',
+            link: 'https://next-typescript-shopify.vercel.app/',
             github: 'https://github.com/blueglasses1995/next-typescript-shopify',
             title: 'Shopifyをバックエンドに置いたECサイト',
             text: '多種多様な決済方法で商品を選択し購入することができる。'
